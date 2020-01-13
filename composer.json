@@ -1,0 +1,18 @@
+{
+    "name": "wuyiwai/simple-php",
+    "description": "a simple php frame",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Wuyiwai",
+            "email": "992040155@qq.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "common\\": "./"
+        }
+    }
+}
