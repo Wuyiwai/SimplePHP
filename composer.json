@@ -9,7 +9,9 @@
             "email": "992040155@qq.com"
         }
     ],
-    "require": {},
+    "require": {
+      "ext-json": "*"
+    },
     "autoload": {
         "psr-4": {
             "common\\": "./"
