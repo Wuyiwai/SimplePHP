@@ -4,6 +4,7 @@
 namespace common\controllers;
 
 
+use common\cache\RedisCache;
 use common\models\CashDetail;
 use common\web\WebController;
 
@@ -28,5 +29,13 @@ class SiteController extends WebController
     {
         $data = CashDetail::findAll([]);
         echo $this->toJson($data);
+    }
+
+    public function actionCache()
+    {
+        $cache = new RedisCache();
+        $cache->set('msg', 'test cache msg');
+        $msg = $cache->get('msg');
+        echo $msg;
     }
 }

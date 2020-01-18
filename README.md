@@ -6,5 +6,5 @@
     2. 02-Application的处理
     3. 03-Controller基类
     4. 04-实现Model
-    5. 05-实现缓存
+    5. 05-实现RedisCache
     6. 06-补全校验和抽象基类
