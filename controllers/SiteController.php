@@ -4,6 +4,7 @@
 namespace common\controllers;
 
 
+use common\models\CashDetail;
 use common\web\WebController;
 
 class SiteController extends WebController
@@ -21,5 +22,11 @@ class SiteController extends WebController
     public function actionView()
     {
         $this->render('site/view', ['msg' => 'This is view']);
+    }
+
+    public function actionGetCashInfo()
+    {
+        $data = CashDetail::findAll([]);
+        echo $this->toJson($data);
     }
 }
