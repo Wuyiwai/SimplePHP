@@ -4,6 +4,7 @@
 namespace common\controllers;
 
 
+use common\cache\FileCache;
 use common\cache\RedisCache;
 use common\models\CashDetail;
 use common\web\WebController;
@@ -37,5 +38,13 @@ class SiteController extends WebController
         $cache->set('msg', 'test cache msg');
         $msg = $cache->get('msg');
         echo $msg;
+    }
+
+    public function actionFileCache()
+    {
+        $cache = new FileCache();
+        $cache->set('test', 'test of fileCache');
+        $result = $cache->get('test');
+        echo $result;
     }
 }
